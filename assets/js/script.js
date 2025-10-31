@@ -12,4 +12,4 @@ function nextSlide() {
 }
 
 // Auto slide every 1 second
-setInterval(nextSlide, 1500);
+setInterval(nextSlide, 2000);
