@@ -1,3 +1,12 @@
+// Hamburger 
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
