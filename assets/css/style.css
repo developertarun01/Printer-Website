@@ -294,6 +294,110 @@ a {
   text-decoration-color: var(--button-dark);
 }
 
+/* section 4 */
+.sec4 {
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px 0; */
+}
+
+.sec4-slide-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.sec4-slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+.sec4-slide {
+  min-width: calc(97% / 3);
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+}
+
+.sec2-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.sec2-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Arrows */
+.sec4-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.sec4-controls button {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  padding: 5px 15px 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sec4-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots */
+.sec4-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.sec4-dots button {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #bbb;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sec4-dots button.active {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sec4-slide {
+    min-width: calc(100% / 2);
+    align-items: stretch;
+  }
+}
+@media (max-width: 600px) {
+  .sec4-slide {
+    min-width: 100%;
+  }
+  .sec4-controls {
+    display: none;
+  }
+}
+
 /* Section 6  */
 .sec6-right {
   width: 100%;
@@ -357,14 +461,16 @@ a {
     font-size: 20px;
   }
 
-  .grid-2, .grid-3, .grid-4 {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .slide {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   .slide-left {
     padding: 20px 20px 0px 20px;
   }
@@ -428,11 +534,11 @@ a {
     height: 350px;
   }
 
-  .sec6-left h2{
+  .sec6-left h2 {
     font-size: 19px;
   }
 
-  .form6-field{
+  .form6-field {
     text-align: start;
     gap: 10px;
   }
@@ -446,7 +552,8 @@ a {
     display: block;
   }
 
-  .footer-center, .footer-right {
+  .footer-center,
+  .footer-right {
     text-align: start;
   }
 }
